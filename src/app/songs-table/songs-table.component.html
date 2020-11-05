@@ -1,0 +1,16 @@
+<div class="container"> 
+<table border="1" style="color: wheat !important;">
+    <th style="min-width:150px">Title</th>
+    <th>Duration</th>
+    <th style="min-width:200px">Genre</th>
+    <th>Delete</th>
+    <tbody style="height: 200px;overflow-y: scroll;">
+        <tr *ngFor="let song of songService.songs">
+            <td>{{song.title}}</td>
+            <td>{{song.duration}}</td>
+            <td>{{song.genre}}</td>
+            <td><img style="cursor: pointer;" title="Click here to delete" (click)="OnDelete(song.id)" src="/assets/Images/Delete.gif" alt="image"></td>
+        </tr>
+    </tbody>
+</table>
+</div>
